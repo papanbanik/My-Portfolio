@@ -29,8 +29,9 @@ const About = () => {
 
     <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 6 }}
+           viewport={{once:true}}
       className='flex flex-col items-center gap-7'>
       {library.map((img, index) => (
         <img key={index} src={img} className='w-9 rounded'/>
@@ -39,8 +40,9 @@ const About = () => {
 
     <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 6 }}
+          viewport={{once:true}}
      className='flex flex-col gap-7 text-xl font-poppins'>
       <p>Tailwind</p>
       <p>React</p>
