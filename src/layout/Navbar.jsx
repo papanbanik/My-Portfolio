@@ -30,18 +30,18 @@ const Navbar = () => {
           onClick={() => setSidebar(false)}
         />
 
-        <Link to="#about" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
+        <a href="#about" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           About
-        </Link>
-        <Link to="/project" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
+        </a>
+        <a href="#project" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           Project
-        </Link>
+        </a>
         <Link to="/experience" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           Experience
         </Link>
-        <Link to="/contact" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
+        <a href="#contact" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           Contact
-        </Link>
+        </a>
       </div>
 
       {/* Menu Icon */}

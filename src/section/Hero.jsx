@@ -1,9 +1,10 @@
 import React from 'react';
 import HeroImage from '../assets/Hero_image.png';
 import { useNavigate } from "react-router-dom";
+import {motion} from 'framer-motion'
 const Hero = () => {
   const navigate = useNavigate();
-
+ 
   return (
     <div className="relative w-full h-[500px] overflow-hidden ">
 
@@ -21,10 +22,18 @@ const Hero = () => {
 
       {/* CONTENT */}
       <div className="ml-10 absolute z-20 top-20 left-1 flex flex-col gap-3 text-white">
-        <h1 className="text-3xl sm:text-6xl  text-white font-mono sm:pl-40">
+        <motion.h1
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ duration: 4 }}
+        className="text-3xl sm:text-6xl  text-white font-mono sm:pl-40">
         Hello I'm <span className="text-indigo-400 text-5xl sm:text-7xl font-bold max-sm:hidden"> Papan </span>
-        </h1>
-          <div className=" pt-2 text-indigo-400 text-4xl font-bold sm:hidden">Papan Banik</div>
+        </motion.h1>
+          <motion.div
+          initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ duration: 2 }}
+           className=" pt-2 text-indigo-400 text-4xl font-bold sm:hidden">Papan Banik</motion.div>
           <div className=" pt-2 text-[#286dbd] text-xl font-bold sm:hidden">Web Developer</div>
         <div className="sm:pl-40 pt-2 text-indigo-400 text-2xl font-semibold max-sm:hidden">Web Developer</div>
         <p className="sm:pl-40 mt-0 text-balance sm:text-lg text-gray-300 max-w-xl leading-relaxed">
@@ -41,7 +50,6 @@ const Hero = () => {
           <button
             onClick={() => window.open("linkedin.com/in/paponbanik58", "_blank")}
             className="max-sm:z-0 cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition">
-
             LinkedIn
           </button>
           <button
@@ -54,7 +62,10 @@ const Hero = () => {
 
       {/* HERO IMAGE */}
       <div className="max-sm:z-0 relative z-10 flex justify-end pb-14 sm:pb-17 items-end h-full max-sm:pl-18  sm:pr-50">
-        <img
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 4 }}
           src={HeroImage}
           alt="Hero"
           className="max-sm:w-[520px] sm:h-[420px] object-contain  max-sm:scale-135 sm:scale-134"

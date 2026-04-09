@@ -8,22 +8,25 @@ const project1 = [
     img: Project1,
     title: "Agenci.ai",
     description: "Agenci.ai is an AI‑powered platform designed to automate and optimize digital marketing tasks",
+    link: "https://floka-project.vercel.app/",
   },
   {
     img: Project2,
     title: "Floka Digital Agency",
     description: "Responsible UI includes Home, About, Services, Portfolio, Blog, Contact sections",
+    link: "https://floka-project.vercel.app/",
   },
   {
     img: Project3,
     title: "ToDo Project",
     description: "A task management application that helps users organize, track, and complete tasks efficiently",
+     link: "#",
   },
 ];
 
 const Project = () => {
   return (
-    <div id="projects" className="w-full py-16 bg-[#1A3046] text-white">
+    <div id="project" className="w-full py-16 bg-[#1A3046] text-white">
       <h2 className="text-3xl font-poppins font-bold text-center mb-10">My Projects</h2>
 
       <div className="flex flex-col sm:flex-row gap-8 justify-center items-start px-5 sm:px-20">
@@ -34,7 +37,11 @@ const Project = () => {
           >
             <img src={project.img} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-5">
+              <div className='flex flex-row  justify-between'>
               <h3 className="text-xl font-bold font-poppins mb-2">{project.title}</h3>
+              <a href={project.link} target='_blank'   rel="noreferrer" 
+              className="text-xl font-bold font-poppins mb-2 underline text-blue-200">Live-Link</a>
+              </div>
               <p className="text-gray-300 text-sm">{project.description}</p>
             </div>
           </div>
