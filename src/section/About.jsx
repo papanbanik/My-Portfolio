@@ -66,7 +66,7 @@ const About = () => {
                    whileInView={{opacity: 1}}
                    viewport={{once:true}}
                    onViewportEnter={()=>startCount({number: 95,setter:setClientCount})}
-                    className='text-2xl font-sans'>{clientCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>%</span> <br/> <span className='text-xl font-poppins'> Satisfaction <br/> Ration </span></div>
+                    className='text-2xl font-sans'>{clientCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>%</span> <br/> <span className='text-xl font-poppins'> Satisfaction <br/> Ratio </span></div>
             <div> </div>
          </div>
     </div>
