@@ -48,7 +48,7 @@ const About = () => {
          <div className='w-105 text-sm font-normal text-justify leading-normal'> Aspiring software engineer strong interest in web development. Skilled in JavaScript, React, Next JS and
               Tailwind CSS with experience building responsive applications. Strong foundation in problem solving and data
               structures</div>
-         <div className='mt-3 flex flex-row  gap-6'>
+         <div className='mt-3 flex flex-row  gap-6 max-sm:pl-10'>
             <div> <motion.span
                    initial={{opacity : 0}}
                    whileInView={{opacity: 1}}
