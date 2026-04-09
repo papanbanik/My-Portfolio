@@ -27,18 +27,26 @@ const About = () => {
 
   <div className='flex items-center gap-6'>
 
-    <div className='flex flex-col items-center gap-7'>
+    <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 4 }}
+      className='flex flex-col items-center gap-7'>
       {library.map((img, index) => (
         <img key={index} src={img} className='w-9 rounded'/>
       ))}
-    </div> 
+    </motion.div> 
 
-    <div className='flex flex-col gap-7 text-xl font-poppins'>
+    <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 4 }}
+     className='flex flex-col gap-7 text-xl font-poppins'>
       <p>Tailwind</p>
       <p>React</p>
       <p>NextJS</p>
       <p className='mb-3'>PostgreSQL</p>
-    </div>
+    </motion.div>
    </div>
    </div>
 
@@ -48,7 +56,7 @@ const About = () => {
          <div className='w-105 text-sm font-normal text-justify leading-normal'> Aspiring software engineer strong interest in web development. Skilled in JavaScript, React, Next JS and
               Tailwind CSS with experience building responsive applications. Strong foundation in problem solving and data
               structures</div>
-         <div className='mt-3 flex flex-row  gap-6 max-sm:pl-10'>
+         <div className='mt-3 flex flex-row  gap-5 max-sm:pl-10'>
             <div> <motion.span
                    initial={{opacity : 0}}
                    whileInView={{opacity: 1}}
