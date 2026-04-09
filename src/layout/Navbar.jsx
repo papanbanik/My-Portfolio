@@ -8,7 +8,7 @@ const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center px-5 py-5 sm:px-10 pt-3 shadow-md bg-[#1A3046] text-white relative z-20">
+    <nav className="flex justify-between items-center px-5 py-5 sm:px-10 pt-3 shadow-md bg-[#1A3046] text-white relative max-sm:z-10">
 
       <Link to="/">
         <h1 className='font-bold pt-2'>PORTFOLIO</h1>
@@ -30,7 +30,7 @@ const Navbar = () => {
           onClick={() => setSidebar(false)}
         />
 
-        <Link to="/about" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
+        <Link to="#about" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           About
         </Link>
         <Link to="/project" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">

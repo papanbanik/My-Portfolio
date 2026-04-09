@@ -1,13 +1,47 @@
-// src/section/Project.jsx
 import React from 'react';
-import Navbar from '../layout/Navbar';
+import Project1 from '../assets/project1.png';
+import Project2 from '../assets/project2.png';
+import Project3 from '../assets/project3.png';
+
+const project1 = [
+  {
+    img: Project1,
+    title: "Agenci.ai",
+    description: "Agenci.ai is an AI‑powered platform designed to automate and optimize digital marketing tasks",
+  },
+  {
+    img: Project2,
+    title: "Floka Digital Agency",
+    description: "Responsible UI includes Home, About, Services, Portfolio, Blog, Contact sections",
+  },
+  {
+    img: Project3,
+    title: "ToDo Project",
+    description: "A task management application that helps users organize, track, and complete tasks efficiently",
+  },
+];
+
 const Project = () => {
-    return (
-        <div>
-            <Navbar/>
-            <h2>Project Section</h2>
-        </div>
-    );
+  return (
+    <div id="projects" className="w-full py-16 bg-[#1A3046] text-white">
+      <h2 className="text-3xl font-poppins font-bold text-center mb-10">My Projects</h2>
+
+      <div className="flex flex-col sm:flex-row gap-8 justify-center items-start px-5 sm:px-20">
+        {project1.map((project, index) => (
+          <div
+            key={index}
+            className="bg-[#2b5075] rounded-xl shadow-lg overflow-hidden w-full sm:w-80 hover:scale-105 transition-transform duration-300"
+          >
+            <img src={project.img} alt={project.title} className="w-full h-48 object-cover" />
+            <div className="p-5">
+              <h3 className="text-xl font-bold font-poppins mb-2">{project.title}</h3>
+              <p className="text-gray-300 text-sm">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default Project; // ✅ this is important
+export default Project;

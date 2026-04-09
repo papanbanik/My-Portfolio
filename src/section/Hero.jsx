@@ -5,7 +5,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full h-[500px] ">
+    <div className="relative w-full h-[500px] overflow-hidden ">
 
       {/* LEFT SIDE OVERLAY */}
       <div
@@ -25,7 +25,7 @@ const Hero = () => {
         Hello I'm <span className="text-indigo-400 text-5xl sm:text-7xl font-bold max-sm:hidden"> Papan </span>
         </h1>
           <div className=" pt-2 text-indigo-400 text-4xl font-bold sm:hidden">Papan Banik</div>
-          <div className=" pt-2 text-[#1e4878] text-xl font-bold sm:hidden">Web Developer</div>
+          <div className=" pt-2 text-[#286dbd] text-xl font-bold sm:hidden">Web Developer</div>
         <div className="sm:pl-40 pt-2 text-indigo-400 text-2xl font-semibold max-sm:hidden">Web Developer</div>
         <p className="sm:pl-40 mt-0 text-balance sm:text-lg text-gray-300 max-w-xl leading-relaxed">
        Aspiring software engineer focused on <br/> web development and intelligent solutions
@@ -40,24 +40,24 @@ const Hero = () => {
           </button>
           <button
             onClick={() => window.open("linkedin.com/in/paponbanik58", "_blank")}
-            className="cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition">
+            className="max-sm:z-0 cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition">
 
             LinkedIn
           </button>
           <button
             onClick={() => navigate("/portfolio")}
-            className="cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition">           
+            className="max-sm:z-0 cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition">           
             Resume
           </button>
         </div>
       </div>
 
       {/* HERO IMAGE */}
-      <div className="relative z-10 flex justify-end pb-10 sm:pb-17 items-end h-full max-sm:pl-18  sm:pr-50">
+      <div className="max-sm:z-0 relative z-10 flex justify-end pb-14 sm:pb-17 items-end h-full max-sm:pl-18  sm:pr-50">
         <img
           src={HeroImage}
           alt="Hero"
-          className="h-[470px] sm:h-[420px] object-contain  max-sm:scale-120 sm:scale-130"
+          className="max-sm:w-[520px] sm:h-[420px] object-contain  max-sm:scale-135 sm:scale-134"
         />
       </div>
     </div>

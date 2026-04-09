@@ -1,6 +1,4 @@
 import Home from './layout/Home';
-import About from './section/About';
-import Project from './section/Project';
 import Experience from './section/Experience';
 import Contact  from './section/Contact';
 import  {Routes, Route} from 'react-router-dom';
@@ -11,9 +9,8 @@ export default function App (){
   
    <Routes>
     <Route path='/' element = {<Home/>}/>
-    <Route path='/about' element = {<About/>}/>
+   {/* <Route path='/about' element = {<About/>}/> */}
     <Route path='/portfolio' element = {<PdfViewer/>}/>
-    <Route path='/project' element = {<Project/>}/>
     <Route path='/experience' element = {<Experience/>}/>
     <Route path='/contact' element= {<Contact/>}/>
    </Routes>
