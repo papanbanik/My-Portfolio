@@ -43,7 +43,7 @@ const Hero = () => {
         {/* BUTTONS */}
         <div className=" sm:pl-40 mt-5 flex gap-5 pt-2">
           <button
-            href="https://github.com/papanbanik"
+            onClick={() => window.open("https://github.com/papanbanik", "_blank")}
             className="cursor-pointer bg-[#1A3046] border px-6 py-2 rounded-full hover:bg-indigo-400 hover:text-white transition">
             Github
           </button>
