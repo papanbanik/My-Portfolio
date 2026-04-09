@@ -32,7 +32,7 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 6 }}
            viewport={{once:true}}
-      className='flex flex-col items-center gap-7'>
+      className='flex flex-col items-center gap-8'>
       {library.map((img, index) => (
         <img key={index} src={img} className='w-9 rounded'/>
       ))}
