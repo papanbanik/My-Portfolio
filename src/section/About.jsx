@@ -54,19 +54,19 @@ const About = () => {
                    whileInView={{opacity: 1}}
                    viewport={{once:true}}
                    onViewportEnter={()=>startCount({number: 10,setter: setCount})}
-                   className='text-2xl font-sans'>{count}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/> <span className='text-xl font-poppins'>Completed <br/> Project</span> </div>
+                   className='text-4xl font-sans'>{count}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/> <span className='text-xl font-poppins'>Completed <br/> Project</span> </div>
              <div> <motion.span
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     viewport={{once:true}}
                     onViewportEnter={()=>startCount({number: 102,setter:setLeetCount})}
-                   className='text-2xl font-sans'>{leetCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/><span className='text-xl font-poppins'> LeetCode <br/> Problem Solved</span> </div>
+                   className='text-4xl font-sans'>{leetCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/><span className='text-xl font-poppins'> LeetCode <br/> Problem Solved</span> </div>
              <div> <motion.span
              initial={{opacity : 0}}
                    whileInView={{opacity: 1}}
                    viewport={{once:true}}
                    onViewportEnter={()=>startCount({number: 95,setter:setClientCount})}
-                    className='text-2xl font-sans'>{clientCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>%</span> <br/> <span className='text-xl font-poppins'> Satisfaction <br/> Ratio </span></div>
+                    className='text-4xl font-sans'>{clientCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>%</span> <br/> <span className='text-xl font-poppins'> Satisfaction <br/> Ratio </span></div>
             <div> </div>
          </div>
     </div>
