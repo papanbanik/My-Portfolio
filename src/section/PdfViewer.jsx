@@ -4,8 +4,7 @@ import Navbar from '../layout/Navbar';
 const PdfViewer = () => {
     return (
         <div className='w-full h-screen'>
-                    <Navbar/>
-
+           <Navbar/>
             <iframe
             src={CvFile}
             title='pdf viewer'

@@ -8,7 +8,7 @@ const project1 = [
     img: Project1,
     title: "Agenci.ai",
     description: "Agenci.ai is an AI‑powered platform designed to automate and optimize digital marketing tasks",
-    link: "https://floka-project.vercel.app/",
+    link: "https://agencyai-ten.vercel.app/",
   },
   {
     img: Project2,
@@ -39,7 +39,7 @@ const Project = () => {
             <div className="p-5">
               <div className='flex flex-row  justify-between'>
               <h3 className="text-xl font-bold font-poppins mb-2">{project.title}</h3>
-              <a href={project.link} target='_blank'   rel="noreferrer" 
+              <a href={project.link} target='_blank'  rel="noreferrer" 
               className="text-xl font-bold font-poppins mb-2 underline text-blue-200">Live-Link</a>
               </div>
               <p className="text-gray-300 text-sm">{project.description}</p>
