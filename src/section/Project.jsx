@@ -20,7 +20,7 @@ const project1 = [
     img: Project3,
     title: "ToDo-List",
     description: "A task management application that helps users organize, track, and complete tasks efficiently",
-     link: "#",
+     link: "https://github.com/papanbanik/Laravel-TodoProject.git",
   },
 ];
 
