@@ -36,7 +36,7 @@ const Navbar = () => {
         <a href="#project" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           Project
         </a>
-        <Link to="/experience" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
+        <a href="#" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
           Experience
         </Link>
         <a href="#contact" onClick={() => setSidebar(false)} className="hover:text-[#4A90E2] transition">
