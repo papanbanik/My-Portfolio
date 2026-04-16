@@ -5,7 +5,8 @@ const Experience = () => {
     return (
         <div>
             <Navbar/>
-            This is Experience
+            <div className='text-center '> Section coming soon </div>
+           
             
         </div>
     );
