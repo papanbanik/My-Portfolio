@@ -5,7 +5,7 @@ const Experience = () => {
     return (
         <div>
             <Navbar/>
-            <div className='text-center '> Section coming soon </div>
+            <div className='text-center '> coming soon </div>
            
             
         </div>
