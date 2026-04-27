@@ -18,9 +18,9 @@ const project1 = [
   },
   {
     img: Project3,
-    title: "E-commerce Site",
-    description: "Selling of goods or services organize, track, and complete tasks efficiently",
-     link: "https://ecommerce-web-app-pied.vercel.app/",
+    title: "Travel Site",
+    description: "Modern and responsive web application designed to smooth booking and experiences",
+     link: "https://travel-site-six-rho.vercel.app",
   },
 ];
 
