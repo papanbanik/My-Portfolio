@@ -1,27 +1,27 @@
 import React from 'react';
 import Project1 from '../assets/project1.PNG';
-import Project2 from '../assets/project2.PNG';
-import Project3 from '../assets/project3.PNG';
+import Project2 from '../assets/project2.JPG';
+import Project3 from '../assets/project3.JPG';
 
 const project1 = [
   {
+    img: Project2,
+    title: "Tashus Car Booking",
+    description: "Book Car, Verify Licence and Enjoy Ride",
+    link: "https://dev-testing.tashus.com/",
+  },
+    {
+    img: Project3,
+    title: "Tashus Admin Site",
+    description: "Manage User, Add Car",
+     link: "https://tashus-admin.vercel.app/",
+  },
+   {
     img: Project1,
     title: "Agenci.ai",
     description: "Agenci.ai is an AI‑powered platform designed to automate and optimize digital marketing tasks",
     link: "https://agencyai-ten.vercel.app/",
-  },
-  {
-    img: Project2,
-    title: "Floka Digital Agency",
-    description: "Responsible UI includes Home, About, Services, Portfolio, Blog, Contact sections",
-    link: "https://floka-project.vercel.app/",
-  },
-  {
-    img: Project3,
-    title: "E-commerce Site",
-    description: "Selling of goods or services organize, track, and complete tasks efficiently",
-     link: "https://ecommerce-web-app-pied.vercel.app/",
-  },
+  }
 ];
 
 const Project = () => {

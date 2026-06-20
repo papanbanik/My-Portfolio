@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import  { library } from '../assets/assets'
 import {motion} from 'framer-motion';
 const About = () => {
   const [count, setCount]= useState(0)
   const [leetCount, setLeetCount] = useState(0);
   const [clientCount, setClientCount] = useState(0);
+  const hasCountedRef1 = useRef(false);
+  const hasCountedRef2 = useRef(false);
+  const hasCountedRef3 = useRef(false);
+  
   const startCount = ({number,setter}) =>{
     const end=number;
     const duration=1500;
@@ -17,6 +21,14 @@ const About = () => {
         clearInterval(interval)
     },stepTime)
   };
+
+  const handleCountStart = (number, setter, ref) => {
+    if (!ref.current) {
+      ref.current = true;
+      startCount({ number, setter });
+    }
+  };
+
     return (
 <div id="about" className='w-full min-h-[300px] mt-5 ml-16 max-sm:ml-5' >
 <div className='flex flex-col sm:flex-row gap-9 sm:gap-7 justify-around
@@ -63,19 +75,19 @@ const About = () => {
                    initial={{opacity : 0}}
                    whileInView={{opacity: 1}}
                    viewport={{once:true}}
-                   onViewportEnter={()=>startCount({number: 10,setter: setCount})}
+                   onViewportEnter={()=>handleCountStart(10, setCount, hasCountedRef1)}
                    className='text-4xl font-sans'>{count}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/> <span className='text-base font-poppins'>Completed Project</span> </div>
              <div> <motion.span
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     viewport={{once:true}}
-                    onViewportEnter={()=>startCount({number: 102,setter:setLeetCount})}
+                    onViewportEnter={()=>handleCountStart(102,setLeetCount, hasCountedRef2)}
                    className='text-4xl font-sans'>{leetCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>+</span> <br/><span className='text-base font-poppins'> LeetCode Solved</span> </div>
              <div> <motion.span
              initial={{opacity : 0}}
                    whileInView={{opacity: 1}}
                    viewport={{once:true}}
-                   onViewportEnter={()=>startCount({number: 95,setter:setClientCount})}
+                   onViewportEnter={()=>handleCountStart(95,setClientCount, hasCountedRef3)}
                     className='text-4xl font-sans'>{clientCount}</motion.span> <span className='text-[#7C86FF] text-xl font-sans'>%</span> <br/> <span className='text-base font-poppins'> Satisfaction  Ratio </span></div>
             <div> </div>
          </div>

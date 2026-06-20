@@ -5,6 +5,7 @@ import Project from '../section/Project';
 import {Toaster} from 'react-hot-toast'
 import Contact from '../section/Contact';
 import Footer from '../section/Footer';
+import Experience from '../section/Experience';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Hero/>
             <About/>
             <Project/>
+            <Experience/>
             <Contact/>
             <Footer/>
         </div>
