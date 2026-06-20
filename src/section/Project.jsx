@@ -22,21 +22,7 @@ const project1 = [
     description:
       "Agenci.ai is an AI-powered platform designed to automate and optimize digital marketing tasks",
     link: "https://agencyai-ten.vercel.app/",
-  },
-  {
-    img: Project2,
-    title: "Floka Digital Agency",
-    description:
-      "Responsible UI includes Home, About, Services, Portfolio, Blog, Contact sections",
-    link: "https://floka-project.vercel.app/",
-  },
-  {
-    img: Project3,
-    title: "Travel Site",
-    description:
-      "Modern and responsive web application designed to smooth booking and experiences",
-    link: "https://travel-site-six-rho.vercel.app",
-  },
+  }
 ];
 
 
