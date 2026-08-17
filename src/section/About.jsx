@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { library } from "../assets/assets";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -11,16 +10,17 @@ const About = () => {
   const hasCountedRef3 = useRef(false);
 
   return (
-    <div className="flex justify-end mt-5">
+    <div className="flex px-6 sm:pl-50 sm:pr-0 mt-0">
       {/* About */}
       <div className="w-full md:w-auto md:pr-20">
         <h2 className="text-2xl font-bold mb-5">About Me</h2>
-        <p className="max-w-[420px] text-sm text-gray-300 leading-6 text-justify">
+        <p className="max-w-[420px] text-sm text-gray-300 leading-6 text-left sm:text-justify">
           Aspiring software engineer with strong interest in web development.
           Skilled in JavaScript, React, Next JS and Tailwind CSS with experience
           building responsive applications. Strong foundation in problem solving
           and data structures.
         </p>
+
         {/* Stats */}
         <div className="flex gap-8 mt-8 flex-wrap">
           <div>

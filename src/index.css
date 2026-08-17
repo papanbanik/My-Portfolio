@@ -23,7 +23,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: var(--color-background);
+    background: linear-gradient(to bottom right, #1a3046, #16283c, #0f1c2b);
     color: white;
     font-family: "Inter", "Poppins", sans-serif;
   }
