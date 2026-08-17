@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import HeroImage from "../assets/Hero_image.png";
+import HeroImage from "../assets/hero_image.png";
 import { useNavigate } from "react-router-dom";
-
 import { motion } from "framer-motion";
+
 const roles = [
   "Full Stack Developer.",
   "MERN Stack Developer.",
@@ -14,9 +14,9 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
     const currentRole = roles[roleIndex];
-    console.log("displayText ", displayText);
     const timeout = setTimeout(
       () => {
         if (!isDeleting) {
@@ -36,81 +36,81 @@ const Hero = () => {
       },
       isDeleting ? 50 : 50,
     );
-    return () => {
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, [displayText, isDeleting, roleIndex]);
+
   return (
-    <div className="relative w-full h-[500px] overflow-hidden ">
-      {/* LEFT SIDE OVERLAY */}
-      <div
-        className="absolute inset-0 z-0 bg-black pointer-events-none"
-        style={{ clipPath: "polygon(0 0, 65% 0, 50% 100%, 0 100%)" }}
-      ></div>
-
-      {/* RIGHT SIDE OVERLAY */}
-      <div
-        className="absolute inset-0 z-0 bg-[#D9D9D9] pointer-events-none"
-        style={{ clipPath: "polygon(65% 0, 100% 0, 100% 100%, 50% 100%)" }}
-      ></div>
-
+    <div className="relative w-full sm:h-[500px] overflow-hidden overflow-x-hidden">
       {/* CONTENT */}
-      <div className="ml-10 absolute z-20 top-20 left-1 flex flex-col gap-3 text-white">
+      <div className="absolute z-20 top-20 left-0 w-full px-6 sm:pl-40 sm:pr-0 flex flex-col gap-3 text-white">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
-          className=" font-serif font-extralight text-3xl sm:text-6xl  text-white  tracking-tight sm:pl-40"
+          transition={{ duration: 1.2 }}
+          className="font-serif font-extralight text-4xl sm:text-6xl text-white tracking-tight"
         >
-          <span className="text-7xl leading-0">H</span>ello, I&apos;m
-          <span className=" text-orange-400  ml-2 sm:ml-3 font-medium ">
-            Papan
-          </span>
+          <span className="text-6xl sm:text-7xl leading-0">H</span>ello,
+          I&apos;m
+          <span className="text-[#F0BA59] ml-2 sm:ml-3 font-medium">Papan</span>
         </motion.h1>
-        <div className="font-serif italic pl-40 pt-2 text-5xl  text-[#286dbd] min-h-[70px] min-w-[300px]  font- ">
+
+        <div className="font-serif italic pt-2 text-3xl sm:text-5xl text-[#286dbd] min-h-[50px] sm:min-h-[70px] min-w-[250px] sm:min-w-[300px]">
           {displayText}
         </div>
-        <p className="sm:pl-40 mt-0 text-balance sm:text-lg text-gray-300 max-w-xl leading-relaxed">
+
+        <p className="mt-0 text-balance sm:text-lg text-gray-300 max-w-xl leading-relaxed">
           Aspiring software engineer focused on <br /> web development and
           intelligent solutions
         </p>
 
         {/* BUTTONS */}
-        <div className=" sm:pl-40 mt-5 flex gap-5 pt-2">
+        <div className="mt-5 flex gap-5 pt-2">
           <button
             onClick={() =>
               window.open("https://github.com/papanbanik", "_blank")
             }
-            className="cursor-pointer bg-[#1A3046] border px-6 py-2 rounded-full hover:bg-indigo-400 hover:text-white transition"
+            className="cursor-pointer bg-[#1E2939] border px-6 py-2 rounded-full hover:bg-indigo-400 hover:text-white transition"
           >
             Github
           </button>
           <button
             onClick={() =>
-              window.open("linkedin.com/in/paponbanik58", "_blank")
+              window.open("https://linkedin.com/in/paponbanik58", "_blank")
             }
-            className="max-sm:z-0 cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition"
+            className="cursor-pointer border px-5 py-2 bg-[#1E2939] rounded-full hover:bg-indigo-400 hover:text-white transition"
           >
             LinkedIn
           </button>
           <button
             onClick={() => navigate("/portfolio")}
-            className="max-sm:z-0 cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition"
+            className="cursor-pointer border px-5 py-2 bg-[#1A3046] rounded-full hover:bg-indigo-400 hover:text-white transition"
           >
             Resume
           </button>
         </div>
       </div>
 
-      {/* HERO IMAGE */}
-      <div className="max-sm:z-0 relative z-10 flex justify-end pb-14 sm:pb-17 items-end h-full max-sm:pl-18  sm:pr-50">
+      {/* HERO IMAGE - DESKTOP */}
+      <div className="max-sm:hidden mt-10 relative z-10 flex justify-end pb-14 sm:pb-17 items-end sm:pr-40">
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
+          transition={{ duration: 1.2 }}
           src={HeroImage}
           alt="Hero"
-          className="max-sm:w-[520px] sm:h-[420px] object-contain  max-sm:scale-135 sm:scale-134"
+          className="rounded sm:h-[400px] object-contain"
+        />
+      </div>
+
+      {/* HERO IMAGE - MOBILE */}
+      <div className="sm:hidden pt-[23rem] pb-[2rem]  relative z-10 flex justify-center items-end w-full">
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          src={HeroImage}
+          alt="Hero"
+          className="rounded w-[280px] object-contain"
         />
       </div>
     </div>
