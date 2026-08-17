@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeroImage from "../assets/hero_image.png";
+
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
