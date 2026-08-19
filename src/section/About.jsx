@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 const About = () => {
   const [count, setCount] = useState(0);
   const [leetCount, setLeetCount] = useState(0);
-  const [clientCount, setClientCount] = useState(0);
   const hasCountedRef1 = useRef(false);
   const hasCountedRef2 = useRef(false);
-  const hasCountedRef3 = useRef(false);
 
   return (
     <div className="flex px-6 sm:pl-50 sm:pr-0 mt-0">
@@ -32,6 +30,7 @@ const About = () => {
             />
             <p>Completed Project</p>
           </div>
+
           <div>
             <Counter
               value={leetCount}
@@ -41,14 +40,12 @@ const About = () => {
             />
             <p>LeetCode Solved</p>
           </div>
+
           <div>
-            <Counter
-              value={clientCount}
-              setter={setClientCount}
-              target={95}
-              refValue={hasCountedRef3}
-            />
-            <p>Satisfaction Ratio</p>
+            <div className="text-2xl font-semibold text-[#7C86FF]">
+              MERN<span>·</span>AI
+            </div>
+            <p className="pt-1 text-xl">Stack</p>
           </div>
         </div>
       </div>

@@ -6,21 +6,23 @@ import Project3 from "../assets/project3.JPG";
 const project1 = [
   {
     img: Project2,
-    title: "Tashus Car Booking",
-    description: "Book Car, Verify Licence and Enjoy Ride",
+    title: "Tashus Car Booking Platform",
+    description:
+      "A car rental platform where users can browse cars, verify their driving licence, and book vehicles for their rides.",
     link: "https://dev-testing.tashus.com/",
   },
   {
     img: Project3,
-    title: "Tashus Admin Site",
-    description: "Manage User, Add Car",
+    title: "Tashus Admin Dashboard",
+    description:
+      "An admin dashboard for managing users, adding and managing cars, and controlling the car rental platform.",
     link: "https://tashus-admin.vercel.app/",
   },
   {
     img: Project1,
-    title: "Agenci.ai",
+    title: "Agenci.ai – AI Marketing Platform",
     description:
-      "Agenci.ai is an AI-powered platform designed to automate and optimize digital marketing tasks",
+      "An AI-powered digital marketing platform that automates and optimizes marketing tasks to improve productivity and efficiency.",
     link: "https://agencyai-ten.vercel.app/",
   },
 ];
@@ -29,7 +31,7 @@ const Project = () => {
   return (
     <div id="project" className="w-full py-16 text-white">
       <h2 className="text-3xl font-poppins font-bold text-center mb-10">
-        My Projects
+        Top Projects
       </h2>
 
       <div
