@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import Close_icon from "../assets/close_icon.svg";
 import Menu_icon from "../assets/menu_icon.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { ThemeContext } from "../context/ThemeContext";
+import { useNavigate } from "react-router-dom";
+import { FiDownload } from "react-icons/fi";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
+  const navigate = useNavigate();
 
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <nav className="flex justify-between items-center px-5 py-5 sm:px-10 pt-3 shadow-md bg-[#1E2939] text-white relative z-30">
       <Link to="/">
@@ -25,7 +31,7 @@ const Navbar = () => {
         <img
           src={Close_icon}
           alt="close"
-          className="w-6 max-sm:absolute max-sm:top-5 max-sm:right-5 sm:hidden cursor-pointer"
+          className="w-6 max-sm:absolute bg-white rounded max-sm:top-5 max-sm:right-5 sm:hidden cursor-pointer"
           onClick={() => setSidebar(false)}
         />
         <a
@@ -56,14 +62,45 @@ const Navbar = () => {
         >
           Contact
         </a>
+        <button
+          onClick={() => navigate("/portfolio")}
+          className="bg-[#F0BA59] text-black flex items-center gap-2 cursor-pointer border px-4 py-2  rounded-full   transition"
+        >
+          <span>
+            <FiDownload />
+          </span>
+          Resume
+        </button>
+        <button
+          onClick={toggleTheme}
+          className="max-sm:hidden cursor-pointer border-2 border-gray-500 rounded-full p-1.5 "
+        >
+          {darkMode ? (
+            <FiMoon className="w-5 h-5" />
+          ) : (
+            <FiSun className="w-5 h-5" />
+          )}
+        </button>
       </div>
 
-      <img
-        src={Menu_icon}
-        alt="menu"
-        onClick={() => setSidebar(true)}
-        className={`w-8 sm:hidden cursor-pointer ${sidebar ? "hidden" : "block"}`}
-      />
+      <div className="sm:hidden flex items-center gap-4">
+        <button
+          onClick={toggleTheme}
+          className="sm:hidden cursor-pointer border-2 border-gray-500 rounded-full p-1.5 "
+        >
+          {darkMode ? (
+            <FiMoon className="w-5 h-5" />
+          ) : (
+            <FiSun className="w-5 h-5" />
+          )}
+        </button>
+        <img
+          src={Menu_icon}
+          alt="menu"
+          onClick={() => setSidebar(true)}
+          className={`w-8 sm:hidden cursor-pointer ${sidebar ? "hidden" : "block"}`}
+        />
+      </div>
     </nav>
   );
 };
