@@ -14,7 +14,7 @@ const project = [
 
   {
     img: Project2,
-    title: "Honest Car Sesll",
+    title: "Honest Car Sell",
     description:
       "A modern car marketplace that connects sellers and buyers on a seamless, user-friendly platform. Sellers can easily list their vehicles with detailed information, images, pricing, and specifications, while buyers can browse, search, and filter available cars to find the vehicle that best matches their needs and preferences.",
     link: "https://dev-testing.honestcarsale.com/",
