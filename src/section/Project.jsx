@@ -1,29 +1,39 @@
 import React from "react";
-import Project1 from "../assets/project1.PNG";
+import Project1 from "../assets/project1.JPG";
 import Project2 from "../assets/project2.JPG";
 import Project3 from "../assets/project3.JPG";
-
-const project1 = [
-  {
-    img: Project2,
-    title: "Tashus Car Booking Platform",
-    description:
-      "A car rental platform where users can browse cars, verify their driving licence, and book vehicles for their rides.",
-    link: "https://dev-testing.tashus.com/",
-  },
-  {
-    img: Project3,
-    title: "Tashus Admin Dashboard",
-    description:
-      "An admin dashboard for managing users, adding and managing cars, and controlling the car rental platform.",
-    link: "https://tashus-admin.vercel.app/",
-  },
+import Project4 from "../assets/project4.JPG";
+const project = [
   {
     img: Project1,
-    title: "Agenci.ai – AI Marketing Platform",
+    title: "Tashus Car Booking Platform",
     description:
-      "An AI-powered digital marketing platform that automates and optimizes marketing tasks to improve productivity and efficiency.",
-    link: "https://agencyai-ten.vercel.app/",
+      "A modern car rental platform that allows users to browse available vehicles, verify their driving licences, and securely book cars for their journeys. The platform provides a seamless booking experience with vehicle details, availability, and user verification.",
+    link: "https://dev-testing.tashus.com/",
+  },
+
+  {
+    img: Project2,
+    title: "Honest Car Sesll",
+    description:
+      "A modern car marketplace that connects sellers and buyers on a seamless, user-friendly platform. Sellers can easily list their vehicles with detailed information, images, pricing, and specifications, while buyers can browse, search, and filter available cars to find the vehicle that best matches their needs and preferences.",
+    link: "https://dev-testing.honestcarsale.com/",
+  },
+
+  {
+    img: Project3,
+    title: "Eat Sharma Restaurant App",
+    description:
+      "A modern restaurant management platform designed to streamline food ordering and restaurant operations. The admin dashboard enables administrators to manage users, organize menu items, monitor orders, and efficiently manage day-to-day restaurant activities through a centralized interface.",
+    link: "https://dev-app.eatshawarma.com.au/",
+  },
+
+  {
+    img: Project4,
+    title: "Tashus Admin Dashboard",
+    description:
+      "A comprehensive admin dashboard for managing the entire car rental ecosystem. It enables administrators to manage users, add and update vehicle listings, monitor reservations, verify customer information, manage vehicle availability, and oversee key platform operations through a centralized interface.",
+    link: "https://tashus-admin.vercel.app/",
   },
 ];
 
@@ -45,7 +55,7 @@ const Project = () => {
         sm:px-20
       "
       >
-        {project1.map((project, index) => (
+        {project.map((project, index) => (
           <div
             key={index}
             className="
