@@ -40,7 +40,7 @@ const Experience = () => {
 
             <div className="border-l-4 border-green-500 pl-5">
               <h3 className="text-xl text-white  font-medium">
-                Software Engineer Intern
+                Software Engineer
               </h3>
 
               <p className="text-gray-300 mt-2">Siara Solution</p>
